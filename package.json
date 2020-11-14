@@ -2,9 +2,9 @@
   "name": "postage-calculator",
   "version": "1.0.0",
   "description": "This is a web application that determines the postage required for a single piece of retail first-class mail.",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
     "test": "node test.js"
   },
   "repository": {
