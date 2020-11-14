@@ -1,0 +1,27 @@
+{
+  "name": "postage-calculator",
+  "version": "1.0.0",
+  "description": "This is a web application that determines the postage required for a single piece of retail first-class mail.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adamgerhartz/Postage-Calculator.git"
+  },
+  "keywords": [
+    "express",
+    "node"
+  ],
+  "author": "Adam Gerhartz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamgerhartz/Postage-Calculator/issues"
+  },
+  "homepage": "https://github.com/adamgerhartz/Postage-Calculator#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
