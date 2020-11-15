@@ -63,16 +63,19 @@ express()
 	.set('views', path.join(__dirname, 'views'))
 	.set('view engine', 'ejs')
 	.get('/', (req, res) => res.write('404'))
+	.get('/mail.html', (req, res) => {
+		res.write('<h1>Hello</h1>');
+	})
 	.get('/getRate', (req, res) => {
-		let q = url.parse(req.url, true);
-		console.log(`Received request for ${q.pathname}`);
-		let data = q.query;
-		const rate = calculateRate(data);
+		let q = url.parse(req.url, true)
+		console.log(`Received request for ${q.pathname}`)
+		let data = q.query
+		const rate = calculateRate(data)
 		res.render('pages/index', {
 			weight: data.weight,
 			type: data.type,
 			rate: rate
-		});
+		})
 	})
 	.listen(PORT, () => console.log(`Listening on ${PORT}`))
 
