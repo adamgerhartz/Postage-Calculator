@@ -1,4 +1,4 @@
-const postage = [
+const postage =  {
 	'letters-stamped' : {
 		'1' : '0.55',
 		'2' : '0.70',
@@ -41,7 +41,7 @@ const postage = [
 		'12' : '5.30',
 		'13' : '5.90'
 	}
-];
+};
 
 const express = require('express')
 const path = require('path')
