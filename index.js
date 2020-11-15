@@ -71,7 +71,7 @@ express()
 			});
 		});
 
-	});
+	})
 	.get('/getRate', (req, res) => {
 		let q = url.parse(req.url, true);
 		console.log(`Received request for ${q.pathname}`);
