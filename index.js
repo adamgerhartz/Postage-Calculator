@@ -1,3 +1,8 @@
+const express = require('express')
+const path = require('path')
+const url = require('url')
+const PORT = process.env.PORT || 5000
+
 const postage =  {
 	'letters-stamped' : {
 		'1' : '0.55',
@@ -43,11 +48,16 @@ const postage =  {
 	}
 };
 
-const express = require('express')
-const path = require('path')
-const url = require('url')
-const PORT = process.env.PORT || 5000
-const model = ServerModel();
+function calculateRate(data) {
+	const weight = data.weight;
+	const type = data.type;
+	const rate = postage[data.type][data.weight];
+	if (rate === undefined) {
+		return 'Error: Something went wrong';
+	}
+	return rate;
+}
+
 
 express()
 	.use(express.static(path.join(__dirname, 'public')))
@@ -63,16 +73,6 @@ express()
 		console.log(rate);
 
 		res.render('pages/index');
-	});
+	})
 	.listen(PORT, () => console.log(`Listening on ${PORT}`))
 
-
-function calculateRate(data) {
-	const weight = data.weight;
-	const type = data.type;
-	const rate = postage[data.type][data.weight];
-	if (rate === undefined) {
-		return 'Error: Something went wrong';
-	}
-	return rate;
-}
