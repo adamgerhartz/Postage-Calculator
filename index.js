@@ -65,11 +65,11 @@ express()
 	.get('/', (req, res) => res.write('404'))
 	.get('/mail.html', (req, res) => {
 		const weightSelection = [...document.getElementById('weight').children];
-		weightSelection.forEach((selection) => {
-			selection.addEventListener('change', (event)=> {
-				console.log(event);
-			});
-		});
+		// weightSelection.forEach((selection) => {
+		// 	selection.addEventListener('change', (event)=> {
+		// 		console.log(event);
+		// 	});
+		// });
 
 	})
 	.get('/getRate', (req, res) => {
