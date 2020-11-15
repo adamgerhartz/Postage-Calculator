@@ -66,7 +66,7 @@ express()
 	.get('/mail.html', (req, res) => {
 		const weightSelection = [...document.getElementById('weight').children];
 		weightSelection.forEach((selection) => {
-			selection.addEventListener('select', (event)=> {
+			selection.addEventListener('change', (event)=> {
 				console.log(event);
 			});
 		});
