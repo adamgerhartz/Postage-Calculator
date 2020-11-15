@@ -62,16 +62,15 @@ express()
 	.use(express.static(path.join(__dirname, 'public')))
 	.set('views', path.join(__dirname, 'views'))
 	.set('view engine', 'ejs')
-	.get('/', (req, res) => res.write('404'))
-	.get('/mail.html', (req, res) => {
-		const weightSelection = [...document.getElementById('weight').children];
-		// weightSelection.forEach((selection) => {
-		// 	selection.addEventListener('change', (event)=> {
-		// 		console.log(event);
-		// 	});
-		// });
+	// .get('/mail.html', (req, res) => {
+	// 	const weightSelection = [...document.getElementById('weight').children];
+	// 	// weightSelection.forEach((selection) => {
+	// 	// 	selection.addEventListener('change', (event)=> {
+	// 	// 		console.log(event);
+	// 	// 	});
+	// 	// });
 
-	})
+	// })
 	.get('/getRate', (req, res) => {
 		let q = url.parse(req.url, true);
 		console.log(`Received request for ${q.pathname}`);
