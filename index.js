@@ -72,7 +72,11 @@ express()
 
 		console.log(rate);
 
-		res.render('pages/index');
+		res.render('pages/index', {
+			weight: data.weight,
+			type: data.type,
+			rate: rate
+		});
 	})
 	.listen(PORT, () => console.log(`Listening on ${PORT}`))
 
