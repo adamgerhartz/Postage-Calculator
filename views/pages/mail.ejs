@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<%- include("../partials/header.ejs") %>
+	<%- include("../partials/header.ejs"); %>
 </head>
 <body>
-	<%- include("../partials/form.ejs") %>
+
+	<%- include("../partials/form.ejs"); %>
 	<%- let weightSelection = [...document.getElementById('weight').children]; %>
 	<%- weightSelection.forEach((selection) => { %>
 	<%  selection.addEventListener('select', (event) => { console.log(event); });%>
