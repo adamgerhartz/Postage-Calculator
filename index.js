@@ -59,13 +59,10 @@ function calculateRate(data) {
 }
 
 express()
-	.get('/mail.html', (req, res) => {
-		res.write('<h1>Hello</h1>');
-	})
 	.use(express.static(path.join(__dirname, 'public')))
 	.set('views', path.join(__dirname, 'views'))
 	.set('view engine', 'ejs')
-	.get('/', (req, res) => res.write('404'))
+	.get('/mail', (req, res) => res.render('pages/mail'));
 	.get('/getRate', (req, res) => {
 		let q = url.parse(req.url, true)
 		console.log(`Received request for ${q.pathname}`)
