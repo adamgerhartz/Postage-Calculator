@@ -8,7 +8,7 @@
 	<%- include("../partials/form.ejs"); %>
 	<%- let weightSelection = [...document.getElementById('weight').children]; %>
 	<%- weightSelection.forEach((selection) => { %>
-	<% selection.addEventListener('select', (event) => { console.log(event); });%>
+	<% selection.addEventListener('select', (event) => { console.log(event); }); %>
 	<% }); %>
 </body>
 </html>
