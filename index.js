@@ -62,7 +62,7 @@ express()
 	.use(express.static(path.join(__dirname, 'public')))
 	.set('views', path.join(__dirname, 'views'))
 	.set('view engine', 'ejs')
-	.get('/mail', (req, res) => res.render('pages/mail'));
+	.get('/mail', (req, res) => res.render('pages/mail'))
 	.get('/getRate', (req, res) => {
 		let q = url.parse(req.url, true)
 		console.log(`Received request for ${q.pathname}`)
