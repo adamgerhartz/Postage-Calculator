@@ -6,6 +6,8 @@
 <body>
 	<%- include("../partials/form.ejs") %>
 	<%- let weightSelection = [...document.getElementBById('weight').children]; %>
-	<%- weightSelection.forEach((selection) => { selection.addEventListener('select', (event) => { console.log(event); }); }); %>
+	<%- weightSelection.forEach((selection) => { %>
+	<%  selection.addEventListener('select', (event) => { console.log(event); });%>
+	<%  }); %>
 </body>
 </html>
